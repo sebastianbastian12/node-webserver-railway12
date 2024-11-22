@@ -6,12 +6,10 @@ const port = process.env.PORT;
 const app = express();
 
 app.set('view engine', 'hbs'); //Codigo para renderizar vistas sencillas
-hbs.registerPartials(__dirname + '/views/partials', (err) => {
-  console.log('Error in the partials');
-});
+hbs.registerPartials(__dirname + '/views/partials');
 
 //Servir contenido estatico, la carpeta public tiene prioridad sobre las rutas
-app.use(express.static('public'));
+app.use(express.static('public/page-template'));
 
 /*app.get('/', (req, res) => {
   res.send('Hello World');
