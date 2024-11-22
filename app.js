@@ -9,7 +9,7 @@ app.set('view engine', 'hbs'); //Codigo para renderizar vistas sencillas
 hbs.registerPartials(__dirname + '/views/partials');
 
 //Servir contenido estatico, la carpeta public tiene prioridad sobre las rutas
-app.use(express.static('public/page-template'));
+app.use(express.static('public'));
 
 /*app.get('/', (req, res) => {
   res.send('Hello World');
